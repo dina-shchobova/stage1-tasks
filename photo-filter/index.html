@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="assets/favicon.ico" rel="shortcut icon" />
+<!--  <link href="assets/favicon.ico" rel="shortcut icon" />-->
   <link href="https://fonts.gstatic.com" rel="preconnect" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap" rel="stylesheet" />
   <link href="style.css" rel="stylesheet" />
@@ -19,7 +19,7 @@
       <label>
         Blur:
         <input name="blur" data-sizing="px" type="range" min="0" max="10" value="0" />
-        <output name="result">0</output>
+        <output class="result-blur" name="result">0</output>
       </label>
       <label>
         Invert:
@@ -50,9 +50,13 @@
           Load picture
           <input class="btn-load--input" id="btnInput" name="upload" type="file" placeholder="Load picture" />
         </label>
-        <button class="btn btn-save">Save picture</button>
+        <a class="btn btn-save"><span class="btn-text">Save picture</span></a>
       </div>
-      <img src="assets/img/img.jpg" alt="image" />
+      <div class="container-img">
+        <img src="assets/img/img.jpg" alt="image"/>
+
+      </div>
+      <canvas class="canvas"></canvas>
     </div>
   </main>
   <footer class="footer">
@@ -64,5 +68,6 @@
     </div>
   </footer>
   <button class="fullscreen openfullscreen"></button>
+  <script src="script.js"></script>
 </body>
 </html>
